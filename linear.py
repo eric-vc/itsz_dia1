@@ -37,7 +37,7 @@ print(linear_model.summary())
 linear_model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=20)
 
 #print(linear_model.predict([ [0.0], [2.0], [3.1], [4.2], [5.2] ] ).tolist() )   
-print(linear_model.predict(tf.constant([ [0.0], [2.0], [3.1], [4.2], [5.2] ] ) ))   
+print(linear_model.predict(tf.constant([ [0.0], [1.0], [2.0], [3.0], [4.0] ] ) ))   
 
 export_path = 'linear-model/1/'
 tf.saved_model.save(linear_model, os.path.join('./',export_path))
